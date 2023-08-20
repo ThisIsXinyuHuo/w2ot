@@ -4,9 +4,13 @@ import jax
 import jax.numpy as jnp
 from jax import dtypes
 from flax import linen as nn
+import jaxopt
+from jaxopt.loss import huber_loss
 
 from functools import partial
-batch_dot = jax.vmap(jnp.dot)
+delta = 1.0
+batch_dot = jax.vmap(lambda y_true, y_pred: jnp.mean(huber_loss(target=y_true, pred=y_pred, delta=delta)))
+#batch_dot = jax.vmap(jnp.dot)
 
 class RunningAverageMeter(object):
     def __init__(self, momentum=0.999):

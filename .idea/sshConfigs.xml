@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="graham.alliancecan.ca" id="790d1ed4-f6ae-431d-a59a-aad7fe394912" keyPath="$USER_HOME$/.ssh/id_rsa" port="22" nameFormat="DESCRIPTIVE" username="xinyu627" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>
